@@ -47,7 +47,7 @@ for i in range(N):
          print("Phi2*Phi0 = ",np.trapz(Phi[2](t)*Phi[0](t),dx=dt))
          print("Phi2*Phi1 = ",np.trapz(Phi[2](t)*Phi[1](t),dx=dt))
 
-         x1, x2, x3 = 2,12,26
+         x1, x2, x3 = 2,12,27
          Y = x1*Phi[0](t) + x2*Phi[1](t) + + x3*Phi[2](t)
          x1_det = np.trapz(Y*Phi[0](t),dx=dt)
          x2_det = np.trapz(Y*Phi[1](t),dx=dt)
