@@ -10,6 +10,8 @@ f = 10
 T = 1/f
 N = 1
 IsThreeScalar = False
+
+#Orthogonal basis functions
 Phi = [lambda t:sqrt(2/T)*np.cos( 2.0*pi*f*t + pi/4), lambda t:sqrt(2/T)*np.cos( 2.0*pi*f*t - pi/4)]
 Phi = [lambda t:sqrt(2/T)*np.cos( 2.0*pi*f*t), lambda t:sqrt(2/T)*np.sin( 2.0*pi*f*t)]
 if IsThreeScalar:
