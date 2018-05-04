@@ -10,7 +10,7 @@ f = 10
 T = 1/f
 N = 1
 IsThreeScalar = False
-IsTwoScalar = False
+IsTwoScalar = True
 
 #Orthogonal basis functions
 Phi = [lambda t:sqrt(2/T)*np.cos( 2.0*pi*f*t + pi/4), lambda t:sqrt(2/T)*np.cos( 2.0*pi*f*t - pi/4)]
@@ -27,8 +27,8 @@ for i in range(N):
      x_det = np.trapz(Y*Phi[0](t),dx=dt)
      print("One scalar : ",x_det)
 	 
-	 if IsThreeScalar:
-		 #Two scalar
+	 #Two scalar
+	 if IsTwoScalar:		 
 		 print("1*Phi1 = ",np.trapz(Phi[1](t)*Phi[1](t),dx=dt))
 		 print("Phi0*Phi0 = ",np.trapz(Phi[0](t)*Phi[0](t),dx=dt))
 		 print("Phi0*Phi1 = ",np.trapz(Phi[0](t)*Phi[1](t),dx=dt))
